@@ -12,11 +12,17 @@ void FillRand(int arr[], const int n);
 void FillRand(double arr[], const int n);
 void FillRand(char arr[], const int n);
 void FillRand(int arr[ROWS][COLS], const int ROWS, const int COLS);
+void FillRand(double arr[ROWS][COLS], const int ROWS, const int COLS);
+void FillRand(char arr[ROWS][COLS], const int ROWS, const int COLS);
+void FillRand(float arr[ROWS][COLS], const int ROWS, const int COLS);
 
 void Print(int arr[], const int n);
 void Print(double arr[], const int n);
 void Print(char arr[], const int n);
 void Print(int arr[ROWS][COLS], const int ROWS, const int COLS);
+void Print(double arr[ROWS][COLS], const int ROWS, const int COLS);
+void Print(char arr[ROWS][COLS], const int ROWS, const int COLS);
+void Print(float arr[ROWS][COLS], const int ROWS, const int COLS);
 
 int Sum(int arr[], const int n);
 double Sum(double arr[], const int n);
@@ -46,7 +52,7 @@ void main()
 	cout << "Введите количество сдвигов: "; cin >> number_of_shifts;
 	leftShift(arr, n, number_of_shifts);
 	Print(arr, n);
-
+	
 	cout << delimiter;
 
 	const int d_SIZE = 8;
@@ -59,6 +65,11 @@ void main()
 	cout << "Введите количество сдвигов: "; cin >> number_of_shifts;
 	leftShift(d_arr, d_SIZE, number_of_shifts);
 	Print(d_arr, d_SIZE);
+	cout << endl;
+	double arr2[ROWS][COLS];
+	FillRand(arr2, ROWS, COLS);
+	Print(arr2, ROWS, COLS);
+	
 
 	cout << delimiter;
 
@@ -66,13 +77,23 @@ void main()
 	char c_arr[c_SIZE];
 	FillRand(c_arr, c_SIZE);
 	Print(c_arr, c_SIZE);
+	cout << endl;
+	char arr3[ROWS][COLS];
+	FillRand(arr3, ROWS, COLS);
+	Print(arr3, ROWS, COLS);
+
 
 	cout << delimiter;
-	int arr2[ROWS][COLS];
-	FillRand(arr2, ROWS, COLS);
-	Print(arr2, ROWS, COLS);
+	cout << "Массив типа int: " << endl;
+	int arr4[ROWS][COLS];
+	FillRand(arr4, ROWS, COLS);
+	Print(arr4, ROWS, COLS);
 	
-
+	cout << delimiter;
+	cout << "Массив типа float:" << endl;
+	float arr5[ROWS][COLS];
+	FillRand(arr5, ROWS, COLS);
+	Print(arr5, ROWS, COLS);
 }
 void FillRand(int arr[], const int n)
 {
@@ -82,7 +103,8 @@ void FillRand(int arr[], const int n)
 void FillRand(double arr[], const int n)
 {
 	for (int i = 0; i < n; i++)
-		arr[i] = double(rand() % 10000) / 100;
+	
+		arr[i] = double(rand() % 10000) / 100;	
 }
 void FillRand(char arr[], const int n)
 {
@@ -95,6 +117,30 @@ void FillRand(int arr[ROWS][COLS], const int ROWS, const int COLS)
 	{
 		for (int j = 0; j < COLS; j++)
 			arr[ROWS][COLS] = rand() % 100;
+	}
+}
+void FillRand(double arr[ROWS][COLS], const int ROWS, const int COLS)
+{
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+			arr[ROWS][COLS] = double(rand() % 10000) / 100;
+	}
+}
+void FillRand(char arr[ROWS][COLS], const int ROWS, const int COLS)
+{
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+			arr[ROWS][COLS] = rand();
+	}
+}
+void FillRand(float arr[ROWS][COLS], const int ROWS, const int COLS)
+{
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+			arr[ROWS][COLS] = float(rand() % 1000) / 10;
 	}
 }
 void Print(int arr[], const int n)
@@ -116,6 +162,39 @@ void Print(char arr[], const int n)
 	cout << endl;
 }
 void Print(int arr[ROWS][COLS], const int ROWS, const int COLS)
+{
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			cout << arr[ROWS][COLS] << "\t";
+		}
+		cout << endl;
+	}
+}
+void Print(double arr[ROWS][COLS], const int ROWS, const int COLS)
+{
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			cout << arr[ROWS][COLS] << "\t";
+		}
+		cout << endl;
+	}
+}
+void Print(char arr[ROWS][COLS], const int ROWS, const int COLS)
+{
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			cout << arr[ROWS][COLS] << "\t";
+		}
+		cout << endl;
+	}
+}
+void Print(float arr[ROWS][COLS], const int ROWS, const int COLS)
 {
 	for (int i = 0; i < ROWS; i++)
 	{
