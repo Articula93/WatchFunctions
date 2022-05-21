@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WatchFunstions", "WatchFunstions\WatchFunstions.vcxproj", "{450BCB35-628C-4100-AA73-FFBE3B7C1C76}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MatrixPractice", "MatrixPractice\MatrixPractice.vcxproj", "{877A9ED2-1CE2-4113-9C44-9B031514D1C5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{450BCB35-628C-4100-AA73-FFBE3B7C1C76}.Release|x64.Build.0 = Release|x64
 		{450BCB35-628C-4100-AA73-FFBE3B7C1C76}.Release|x86.ActiveCfg = Release|Win32
 		{450BCB35-628C-4100-AA73-FFBE3B7C1C76}.Release|x86.Build.0 = Release|Win32
+		{877A9ED2-1CE2-4113-9C44-9B031514D1C5}.Debug|x64.ActiveCfg = Debug|x64
+		{877A9ED2-1CE2-4113-9C44-9B031514D1C5}.Debug|x64.Build.0 = Debug|x64
+		{877A9ED2-1CE2-4113-9C44-9B031514D1C5}.Debug|x86.ActiveCfg = Debug|Win32
+		{877A9ED2-1CE2-4113-9C44-9B031514D1C5}.Debug|x86.Build.0 = Debug|Win32
+		{877A9ED2-1CE2-4113-9C44-9B031514D1C5}.Release|x64.ActiveCfg = Release|x64
+		{877A9ED2-1CE2-4113-9C44-9B031514D1C5}.Release|x64.Build.0 = Release|x64
+		{877A9ED2-1CE2-4113-9C44-9B031514D1C5}.Release|x86.ActiveCfg = Release|Win32
+		{877A9ED2-1CE2-4113-9C44-9B031514D1C5}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
